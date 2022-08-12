@@ -131,3 +131,7 @@ PARTITION BY
   OPTIONS (
     partition_expiration_days = 3,
     require_partition_filter = TRUE);
+
+
+
+# https://cloud.google.com/products/calculator
