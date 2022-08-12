@@ -108,3 +108,6 @@ AS r"""
 
 SELECT customGreeting(names) AS everyone
 FROM UNNEST(['Hannah', 'Max', 'Jakob']) AS names;
+
+
+# https://storage.googleapis.com/pub-tools-public-publication-data/pdf/36632.pdf
