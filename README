@@ -83,6 +83,8 @@ FROM
 UNNEST([0, 2, 4, 4, 5]) as x;
 
 
+
+
 CREATE TEMP FUNCTION AddFourAndDivide(x INT64, y INT64)
 RETURNS FLOAT64
 AS (
@@ -111,3 +113,11 @@ FROM UNNEST(['Hannah', 'Max', 'Jakob']) AS names;
 
 
 # https://storage.googleapis.com/pub-tools-public-publication-data/pdf/36632.pdf
+
+## Array
+select array(SELECT name FROM `techlanders-aug22.jai_us_states_dataset.jai_us_states_table` limit 10 );
+
+## Subquery 
+select name 
+FROM 
+(SELECT name FROM `techlanders-aug22.jai_us_states_dataset.jai_us_states_table` limit 10 );
