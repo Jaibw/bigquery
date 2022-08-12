@@ -44,3 +44,10 @@ sed -i 's/USER/jaikumer/g' bigquery002.py
 cat bigquery002.py 
 python3 bigquery002.py
 ## open GCP > BigQuery 
+
+## Enable Jupyter notebook
+pip3 install jupyter
+# reconnect ssh session 
+export GOOGLE_APPLICATION_CREDENTIALS=~/key.json
+jupyter notebook --port=8888 --ip=0.0.0.0
+Open chrome and access http://PUBLIC_IP:8888/?token=TOKEN 
