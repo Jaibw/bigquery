@@ -34,3 +34,13 @@ sudo apt install python3-pip
 pip3 install --upgrade google-cloud-bigquery
 wget https://raw.githubusercontent.com/Jaibw/bigquery/master/bigquery001.py 
 python3 bigquery001.py  
+
+## load data using python 
+gsutil cp gs://cloud-samples-data/bigquery/us-states/us-states.json ~/.
+cat us-states.json
+wget https://raw.githubusercontent.com/Jaibw/bigquery/master/bigquery002.py 
+cat bigquery002.py 
+sed -i 's/USER/jaikumer/g' bigquery002.py
+cat bigquery002.py 
+python3 bigquery002.py
+## open GCP > BigQuery 
