@@ -64,3 +64,20 @@ mvn spring-boot:run
 curl localhost:5000
 
 ## https://cloud.google.com/dataproc/docs/tutorials/bigquery-connector-spark-example#scala 
+
+# https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#sum 
+SELECT MIN(x) as avg
+FROM 
+UNNEST([0, 2, 4, 4, 5]) as x;
+
+SELECT MAX(x) as avg
+FROM 
+UNNEST([0, 2, 4, 4, 5]) as x;
+
+SELECT AVG(x) as avg
+FROM 
+UNNEST([0, 2, 4, 4, 5]) as x;
+
+SELECT SUM(x) as avg
+FROM 
+UNNEST([0, 2, 4, 4, 5]) as x;
