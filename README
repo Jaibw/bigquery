@@ -52,3 +52,13 @@ pip3 install jupyter
 export GOOGLE_APPLICATION_CREDENTIALS=~/key.json
 jupyter notebook --port=8888 --ip=0.0.0.0
 Open chrome and access http://PUBLIC_IP:8888/?token=TOKEN 
+
+## Java Integration 
+sudo apt install default-jdk maven git -y 
+export GOOGLE_APPLICATION_CREDENTIALS=~/key.json
+git clone https://github.com/Jaibw/monitorFinal.git
+cd monitorFinal
+sed -i 's/USER/jaikumer/g' src/main/java/com/example/monitorFinal/MonitorFinalApplication.java
+mvn spring-boot:run
+## launch another ssh and then run below command 
+curl localhost:5000
